@@ -1,0 +1,4 @@
+# Optional: only needed to regenerate the README screenshots
+# (python -m scripts.capture_screenshots). After installing, run
+#   python -m playwright install chromium
+playwright==1.63.0

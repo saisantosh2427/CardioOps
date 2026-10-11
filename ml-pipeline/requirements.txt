@@ -1,0 +1,34 @@
+# Runtime dependencies for the full pipeline (ingest, train, monitor, retrain, serve).
+# Every version is pinned for reproducibility. The API and monitor images install
+# smaller subsets (api/requirements.txt, monitor/requirements.txt) that MUST use
+# the same versions; tests/test_requirements.py enforces this.
+
+# --- Core ML ---
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.17.1
+pyarrow==25.0.1
+matplotlib==3.11.2
+
+# --- Validation & configuration ---
+pandera==0.34.1
+pydantic==2.14.0
+pydantic-settings==2.15.0
+pyyaml==6.0.3
+
+# --- Experiment tracking & model registry ---
+mlflow==3.17.0
+skops==0.16.0
+
+# --- Monitoring & prediction store ---
+evidently==0.7.23
+prometheus-client==0.26.0
+sqlalchemy==2.1.4
+psycopg[binary]==3.3.6
+
+# --- Serving ---
+fastapi==0.143.0
+uvicorn[standard]==0.54.0
+requests==2.34.2
+structlog==26.1.0

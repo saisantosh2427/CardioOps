@@ -1,0 +1,17 @@
+.git
+.github
+.venv
+venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+.coverage
+htmlcov
+data
+mlruns
+mlartifacts
+reports
+*.db
+.env
+hf_space/build

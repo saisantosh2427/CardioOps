@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Secrets / local config
+.env
+
+# Data (re-created by `make ingest`; see data/README.md)
+data/*
+!data/README.md
+!data/download_data.sh
+
+# MLflow local stores & generated outputs
+mlruns/
+mlartifacts/
+*.db
+reports/
+hf_space/build/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

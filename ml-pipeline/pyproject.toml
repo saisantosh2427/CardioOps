@@ -1,0 +1,53 @@
+[project]
+name = "heart-disease-mlops"
+version = "1.0.0"
+description = "End-to-end MLOps pipeline for heart disease risk prediction (100% free/open-source stack)."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = { text = "MIT" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["data", "mlruns", "mlartifacts", "reports"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # bugbear
+  "UP",  # pyupgrade
+  "N",   # pep8-naming
+  "SIM", # simplify
+  "RUF", # ruff-specific
+]
+ignore = [
+  "N803", # X / X_train argument names are the ML convention
+  "N806", # same for local variables
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["slow: trains real models / runs Evidently (deselect with -m 'not slow')"]
+filterwarnings = [
+  "ignore::DeprecationWarning",
+  "ignore::FutureWarning",
+  "ignore::UserWarning",
+]
+
+[tool.coverage.run]
+source = ["src", "api", "monitor", "scripts"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

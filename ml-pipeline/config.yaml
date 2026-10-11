@@ -1,0 +1,108 @@
+# Single source of truth for pipeline configuration.
+#
+# Every value can be overridden with an environment variable named
+#   PIPELINE_<SECTION>__<KEY>
+# e.g. PIPELINE_MLFLOW__TRACKING_URI=http://mlflow:5000 (see .env.example).
+# Relative paths are resolved against the repository root.
+
+project:
+  name: heart-disease-risk
+  random_seed: 42
+  log_level: INFO
+  log_format: console # console | json
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  production_dir: data/production
+  reports_dir: reports
+
+data:
+  # UCI Heart Disease (4 hospitals, 920 patients). CC BY 4.0.
+  uci_base_url: https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease
+  uci_files:
+    cleveland: processed.cleveland.data
+    hungarian: processed.hungarian.data
+    switzerland: processed.switzerland.data
+    va: processed.va.data
+  # Used only if the UCI archive is unreachable (same feature coding, 270 rows).
+  openml_fallback_name: heart-statlog
+  openml_fallback_version: 1
+  download_timeout_seconds: 30
+  # Fraction of the data kept as the "reference" (training) set; the rest is
+  # split into simulated production batches that arrive after deployment.
+  reference_fraction: 0.6
+  n_production_batches: 4
+
+training:
+  test_size: 0.2
+  cv_folds: 5
+  search_scoring: roc_auc
+  decision_threshold: 0.5
+  n_jobs: -1
+  candidates:
+    logistic_regression:
+      enabled: true
+      param_grid:
+        model__C: [0.01, 0.1, 1.0, 10.0]
+        model__class_weight: [null, balanced]
+    random_forest:
+      enabled: true
+      param_grid:
+        model__n_estimators: [200]
+        model__max_depth: [null, 5, 8]
+        model__min_samples_leaf: [1, 3, 5]
+    gradient_boosting:
+      enabled: true
+      param_grid:
+        model__n_estimators: [100, 200]
+        model__learning_rate: [0.05, 0.1]
+        model__max_depth: [2, 3]
+
+mlflow:
+  tracking_uri: http://localhost:5000
+  experiment_name: heart-disease-risk
+  registered_model_name: heart-disease-classifier
+  champion_alias: champion
+  challenger_alias: challenger
+  previous_champion_alias: previous-champion
+
+monitoring:
+  # SQLite locally / in tests; docker-compose points this at Postgres.
+  database_url: sqlite:///data/monitoring.db
+  # Number of most recent logged predictions compared against the reference.
+  window_size: 200
+  min_current_samples: 30
+  # Retrain when at least this share of features drift (Evidently per-column tests).
+  drift_share_threshold: 0.3
+  stattest_threshold: 0.05
+  # Performance check on labeled production data (delayed ground truth).
+  performance_metric: roc_auc
+  min_labeled_samples: 30
+  max_metric_drop: 0.05
+  report_cache_seconds: 60
+  # Browser-facing links shown on the monitor dashboard.
+  mlflow_ui_url: http://localhost:5000
+  api_url: http://localhost:8000
+
+retrain:
+  # Share of the labeled production window held out to compare champion vs challenger.
+  holdout_fraction: 0.4
+  # ROC-AUC is threshold-independent and the most stable metric on small
+  # hold-out sets; F1 breaks exact ties.
+  promotion_metric: roc_auc
+  tiebreak_metric: f1
+  min_improvement: 0.0
+  min_labeled_samples: 50
+  # Recency weighting of new production rows when retraining: "balanced" gives
+  # them the same total weight as the historical rows (adapts to concept drift
+  # while keeping history for volume); "none" or a fixed per-row weight (e.g. 2.0).
+  production_weight: balanced
+
+api:
+  # Empty -> models:/<registered_model_name>@<champion_alias>.
+  # Set to a local directory to serve an exported model (e.g. Hugging Face Spaces).
+  model_uri: ""
+  refresh_interval_seconds: 30
+  log_predictions: true
+  max_batch_size: 1000

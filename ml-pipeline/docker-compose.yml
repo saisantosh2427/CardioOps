@@ -1,0 +1,161 @@
+# Local MLOps stack - everything free/open-source, CPU-only.
+#   docker compose up -d --build          # infra + API (+ monitor)
+#   docker compose run --rm trainer python -m src.ingest
+#   docker compose run --rm trainer python -m src.train
+# All variables have defaults, so no .env file is required to start.
+
+name: heart-mlops
+
+x-pipeline-env: &pipeline-env
+  PIPELINE_MLFLOW__TRACKING_URI: http://mlflow:5000
+  PIPELINE_MONITORING__DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-mlflow}:${POSTGRES_PASSWORD:-mlflow}@postgres:5432/${MONITORING_DB:-monitoring}
+  PIPELINE_PROJECT__LOG_FORMAT: json
+  MLFLOW_DISABLE_TELEMETRY: "true"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mlflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mlflow}
+      POSTGRES_DB: ${POSTGRES_DB:-mlflow}
+      MONITORING_DB: ${MONITORING_DB:-monitoring}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/postgres/init-monitoring-db.sh:/docker-entrypoint-initdb.d/10-init-monitoring-db.sh:ro
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  minio:
+    image: ${MINIO_IMAGE:-pgsty/minio:RELEASE.2026-08-04T00-00-00Z}
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    volumes:
+      - minio-data:/data
+    ports:
+      - "${MINIO_PORT:-9000}:9000"
+      - "${MINIO_CONSOLE_PORT:-9001}:9001"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  # One-shot init container: creates the MLflow artifact bucket, then exits 0.
+  minio-init:
+    image: ${MINIO_IMAGE:-pgsty/minio:RELEASE.2026-08-04T00-00-00Z}
+    depends_on:
+      minio:
+        condition: service_healthy
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+      MLFLOW_BUCKET: ${MLFLOW_BUCKET:-mlflow}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        mc alias set local http://minio:9000 "$$MINIO_ROOT_USER" "$$MINIO_ROOT_PASSWORD" &&
+        mc mb --ignore-existing "local/$$MLFLOW_BUCKET" &&
+        echo "bucket $$MLFLOW_BUCKET ready"
+    restart: "no"
+
+  mlflow:
+    build:
+      context: .
+      dockerfile: docker/mlflow/Dockerfile
+    image: heart-mlops/mlflow:local
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+    environment:
+      MLFLOW_S3_ENDPOINT_URL: http://minio:9000
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER:-minioadmin}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    command:
+      - mlflow
+      - server
+      - --host=0.0.0.0
+      - --port=5000
+      - --workers=2
+      - --backend-store-uri=postgresql+psycopg://${POSTGRES_USER:-mlflow}:${POSTGRES_PASSWORD:-mlflow}@postgres:5432/${POSTGRES_DB:-mlflow}
+      - --artifacts-destination=s3://${MLFLOW_BUCKET:-mlflow}
+      - --serve-artifacts
+      # MLflow 3.5+ rejects unknown Host headers (DNS-rebinding protection);
+      # allow the compose service name as well as localhost.
+      - --allowed-hosts=mlflow,mlflow:5000,localhost,localhost:*,127.0.0.1,127.0.0.1:*
+    ports:
+      - "${MLFLOW_PORT:-5000}:5000"
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    image: ${API_IMAGE:-heart-mlops/api:local}
+    depends_on:
+      mlflow:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      <<: *pipeline-env
+      PIPELINE_API__REFRESH_INTERVAL_SECONDS: "15"
+    ports:
+      - "${API_PORT:-8000}:8000"
+    restart: unless-stopped
+
+  monitor:
+    build:
+      context: .
+      dockerfile: monitor/Dockerfile
+    image: ${MONITOR_IMAGE:-heart-mlops/monitor:local}
+    depends_on:
+      mlflow:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      <<: *pipeline-env
+      # Links rendered in the browser, so they use host ports.
+      PIPELINE_MONITORING__MLFLOW_UI_URL: http://localhost:${MLFLOW_PORT:-5000}
+      PIPELINE_MONITORING__API_URL: http://localhost:${API_PORT:-8000}
+    ports:
+      - "${MONITOR_PORT:-8050}:8050"
+    restart: unless-stopped
+
+  # Batch jobs (not started by `docker compose up`):
+  #   docker compose run --rm trainer python -m src.train
+  trainer:
+    build:
+      context: .
+      dockerfile: docker/pipeline/Dockerfile
+    image: heart-mlops/pipeline:local
+    profiles: ["jobs"]
+    depends_on:
+      mlflow:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      <<: *pipeline-env
+      API_URL: http://api:8000
+    volumes:
+      - pipeline-data:/app/data
+      - pipeline-reports:/app/reports
+
+volumes:
+  postgres-data:
+  minio-data:
+  pipeline-data:
+  pipeline-reports:
