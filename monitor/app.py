@@ -192,11 +192,12 @@ def render_dashboard(summary: dict[str, Any], settings: Settings) -> str:
     links = (
         f'<a href="/reports/drift">Drift report</a>'
         f'<a href="/reports/performance">Performance report</a>'
-        f'<a href="/api/summary">JSON</a>'
-        f'<a href="{html.escape(settings.monitoring.mlflow_ui_url)}">MLflow UI</a>'
+        f'<a href="/summary">JSON</a>'
         f'<a href="{html.escape(settings.monitoring.api_url)}/docs">API docs</a>'
         f'<a href="/?refresh=true">Refresh now</a>'
     )
+    if settings.monitoring.mlflow_ui_url:
+        links += f'<a href="{html.escape(settings.monitoring.mlflow_ui_url)}">MLflow UI</a>'
     status = summary.get("status")
     if status == "error":
         body = f'<p class="bad">Monitoring failed: {html.escape(summary["error"])}</p>'
@@ -276,7 +277,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     def dashboard(refresh: bool = Query(False)) -> str:
         return render_dashboard(service.summary(refresh=refresh), settings)
 
-    @app.get("/api/summary")
+    @app.get("/api/summary", include_in_schema=False)
+    @app.get("/summary")
     def summary(refresh: bool = Query(False)) -> dict[str, Any]:
         return service.summary(refresh=refresh)
 

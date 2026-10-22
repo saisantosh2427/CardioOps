@@ -1,0 +1,218 @@
+2026/10/21 19:29:45 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+INFO:     Started server process [11992]
+INFO:     Waiting for application startup.
+2026-10-22T00:29:49.468946Z [info     ] model_loaded                   [api.model_service] model_type=random_forest name=heart-disease-classifier previous_version=None source=registry version=1
+2026-10-22T00:29:49.469947Z [info     ] api_started                    [api] model_uri=models:/heart-disease-classifier@champion
+2026-10-22T00:29:49.470945Z [info     ] Application startup complete.  [uvicorn.error]
+2026-10-22T00:29:49.471946Z [info     ] Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit) [uvicorn.error]
+2026-10-22T00:30:03.168950Z [info     ] http_request                   [api] duration_ms=0.27 method=GET route=unmatched status=200
+2026-10-22T00:30:06.565705Z [info     ] http_request                   [api] duration_ms=25.6 method=GET route=unmatched status=200
+2026-10-22T00:30:17.968840Z [info     ] http_request                   [api] duration_ms=96.55 method=POST route=/predict status=200
+2026-10-22T00:30:31.839160Z [info     ] http_request                   [api] duration_ms=0.31 method=GET route=unmatched status=200
+2026-10-22T00:30:32.338911Z [info     ] http_request                   [api] duration_ms=0.61 method=GET route=unmatched status=200
+2026-10-22T00:30:43.643996Z [info     ] http_request                   [api] duration_ms=37.4 method=POST route=/predict status=200
+2026-10-22T00:31:07.125821Z [info     ] http_request                   [api] duration_ms=0.22 method=GET route=unmatched status=200
+2026-10-22T00:31:07.559866Z [info     ] http_request                   [api] duration_ms=0.62 method=GET route=unmatched status=200
+2026-10-22T00:31:18.832246Z [info     ] http_request                   [api] duration_ms=45.4 method=POST route=/predict status=200
+2026-10-22T00:31:30.680068Z [info     ] http_request                   [api] duration_ms=37.14 method=POST route=/predict status=200
+2026-10-22T00:31:30.688066Z [info     ] http_request                   [api] duration_ms=6.04 method=POST route=/feedback status=200
+2026-10-22T00:31:30.715071Z [info     ] http_request                   [api] duration_ms=25.82 method=POST route=/predict status=200
+2026-10-22T00:31:30.721071Z [info     ] http_request                   [api] duration_ms=4.22 method=POST route=/feedback status=200
+2026-10-22T00:31:30.751612Z [info     ] http_request                   [api] duration_ms=29.7 method=POST route=/predict status=200
+2026-10-22T00:31:30.758614Z [info     ] http_request                   [api] duration_ms=4.92 method=POST route=/feedback status=200
+2026-10-22T00:31:30.787614Z [info     ] http_request                   [api] duration_ms=27.42 method=POST route=/predict status=200
+2026-10-22T00:31:30.792613Z [info     ] http_request                   [api] duration_ms=3.96 method=POST route=/feedback status=200
+2026-10-22T00:31:30.818615Z [info     ] http_request                   [api] duration_ms=25.29 method=POST route=/predict status=200
+2026-10-22T00:31:30.824617Z [info     ] http_request                   [api] duration_ms=4.28 method=POST route=/feedback status=200
+2026-10-22T00:31:30.849132Z [info     ] http_request                   [api] duration_ms=23.36 method=POST route=/predict status=200
+2026-10-22T00:31:30.854136Z [info     ] http_request                   [api] duration_ms=3.92 method=POST route=/feedback status=200
+2026-10-22T00:31:30.879251Z [info     ] http_request                   [api] duration_ms=24.18 method=POST route=/predict status=200
+2026-10-22T00:31:30.885253Z [info     ] http_request                   [api] duration_ms=3.98 method=POST route=/feedback status=200
+2026-10-22T00:31:30.885253Z [error    ] Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)> [asyncio]
+Traceback (most recent call last):
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-10-22T00:31:30.924263Z [info     ] http_request                   [api] duration_ms=25.93 method=POST route=/predict status=200
+2026-10-22T00:31:30.929768Z [info     ] http_request                   [api] duration_ms=4.44 method=POST route=/feedback status=200
+2026-10-22T00:31:30.954774Z [info     ] http_request                   [api] duration_ms=23.99 method=POST route=/predict status=200
+2026-10-22T00:31:30.960775Z [info     ] http_request                   [api] duration_ms=3.94 method=POST route=/feedback status=200
+2026-10-22T00:31:30.985773Z [info     ] http_request                   [api] duration_ms=24.0 method=POST route=/predict status=200
+2026-10-22T00:31:30.990774Z [info     ] http_request                   [api] duration_ms=3.84 method=POST route=/feedback status=200
+2026-10-22T00:31:31.024783Z [info     ] http_request                   [api] duration_ms=32.22 method=POST route=/predict status=200
+2026-10-22T00:31:31.034293Z [info     ] http_request                   [api] duration_ms=7.48 method=POST route=/feedback status=200
+2026-10-22T00:31:31.070391Z [info     ] http_request                   [api] duration_ms=33.5 method=POST route=/predict status=200
+2026-10-22T00:31:31.078391Z [info     ] http_request                   [api] duration_ms=5.49 method=POST route=/feedback status=200
+2026-10-22T00:31:31.111390Z [info     ] http_request                   [api] duration_ms=30.9 method=POST route=/predict status=200
+2026-10-22T00:31:31.125400Z [info     ] http_request                   [api] duration_ms=10.95 method=POST route=/feedback status=200
+2026-10-22T00:31:31.159922Z [info     ] http_request                   [api] duration_ms=31.99 method=POST route=/predict status=200
+2026-10-22T00:31:31.171919Z [info     ] http_request                   [api] duration_ms=8.33 method=POST route=/feedback status=200
+2026-10-22T00:31:31.203918Z [info     ] http_request                   [api] duration_ms=29.8 method=POST route=/predict status=200
+2026-10-22T00:31:31.211922Z [info     ] http_request                   [api] duration_ms=6.29 method=POST route=/feedback status=200
+2026-10-22T00:31:31.245415Z [info     ] http_request                   [api] duration_ms=30.48 method=POST route=/predict status=200
+2026-10-22T00:31:31.254414Z [info     ] http_request                   [api] duration_ms=6.37 method=POST route=/feedback status=200
+2026-10-22T00:31:31.287265Z [info     ] http_request                   [api] duration_ms=30.97 method=POST route=/predict status=200
+2026-10-22T00:31:31.296247Z [info     ] http_request                   [api] duration_ms=6.24 method=POST route=/feedback status=200
+2026-10-22T00:31:31.327271Z [info     ] http_request                   [api] duration_ms=29.3 method=POST route=/predict status=200
+2026-10-22T00:31:31.336405Z [info     ] http_request                   [api] duration_ms=6.05 method=POST route=/feedback status=200
+2026-10-22T00:31:31.366446Z [info     ] http_request                   [api] duration_ms=28.75 method=POST route=/predict status=200
+2026-10-22T00:31:31.374910Z [info     ] http_request                   [api] duration_ms=5.82 method=POST route=/feedback status=200
+2026-10-22T00:31:31.400915Z [info     ] http_request                   [api] duration_ms=25.15 method=POST route=/predict status=200
+2026-10-22T00:31:31.407309Z [info     ] http_request                   [api] duration_ms=4.17 method=POST route=/feedback status=200
+2026-10-22T00:31:31.435509Z [info     ] http_request                   [api] duration_ms=26.91 method=POST route=/predict status=200
+2026-10-22T00:31:31.441124Z [info     ] http_request                   [api] duration_ms=4.19 method=POST route=/feedback status=200
+2026-10-22T00:31:31.466160Z [info     ] http_request                   [api] duration_ms=23.89 method=POST route=/predict status=200
+2026-10-22T00:31:31.472212Z [info     ] http_request                   [api] duration_ms=4.48 method=POST route=/feedback status=200
+2026-10-22T00:31:31.497722Z [info     ] http_request                   [api] duration_ms=24.38 method=POST route=/predict status=200
+2026-10-22T00:31:31.502837Z [info     ] http_request                   [api] duration_ms=3.92 method=POST route=/feedback status=200
+2026-10-22T00:31:31.527845Z [info     ] http_request                   [api] duration_ms=24.41 method=POST route=/predict status=200
+2026-10-22T00:31:31.533296Z [info     ] http_request                   [api] duration_ms=4.07 method=POST route=/feedback status=200
+2026-10-22T00:31:31.558863Z [info     ] http_request                   [api] duration_ms=24.4 method=POST route=/predict status=200
+2026-10-22T00:31:31.563861Z [info     ] http_request                   [api] duration_ms=4.15 method=POST route=/feedback status=200
+2026-10-22T00:31:31.590372Z [info     ] http_request                   [api] duration_ms=24.51 method=POST route=/predict status=200
+2026-10-22T00:31:31.595371Z [info     ] http_request                   [api] duration_ms=3.86 method=POST route=/feedback status=200
+2026-10-22T00:31:31.624398Z [info     ] http_request                   [api] duration_ms=27.24 method=POST route=/predict status=200
+2026-10-22T00:31:31.631907Z [info     ] http_request                   [api] duration_ms=5.44 method=POST route=/feedback status=200
+2026-10-22T00:31:31.659946Z [info     ] http_request                   [api] duration_ms=26.73 method=POST route=/predict status=200
+2026-10-22T00:31:31.666951Z [info     ] http_request                   [api] duration_ms=5.05 method=POST route=/feedback status=200
+2026-10-22T00:31:31.696467Z [info     ] http_request                   [api] duration_ms=28.74 method=POST route=/predict status=200
+2026-10-22T00:31:31.703463Z [info     ] http_request                   [api] duration_ms=4.82 method=POST route=/feedback status=200
+2026-10-22T00:31:31.732981Z [info     ] http_request                   [api] duration_ms=27.72 method=POST route=/predict status=200
+2026-10-22T00:31:31.740982Z [info     ] http_request                   [api] duration_ms=6.0 method=POST route=/feedback status=200
+2026-10-22T00:31:31.770982Z [info     ] http_request                   [api] duration_ms=27.63 method=POST route=/predict status=200
+2026-10-22T00:31:31.776981Z [info     ] http_request                   [api] duration_ms=4.48 method=POST route=/feedback status=200
+2026-10-22T00:31:31.806982Z [info     ] http_request                   [api] duration_ms=28.44 method=POST route=/predict status=200
+2026-10-22T00:31:31.813982Z [info     ] http_request                   [api] duration_ms=5.04 method=POST route=/feedback status=200
+2026-10-22T00:31:31.845036Z [info     ] http_request                   [api] duration_ms=28.8 method=POST route=/predict status=200
+2026-10-22T00:31:31.851035Z [info     ] http_request                   [api] duration_ms=4.72 method=POST route=/feedback status=200
+2026-10-22T00:31:31.882303Z [info     ] http_request                   [api] duration_ms=29.01 method=POST route=/predict status=200
+2026-10-22T00:31:31.889303Z [info     ] http_request                   [api] duration_ms=5.16 method=POST route=/feedback status=200
+2026-10-22T00:31:31.919319Z [info     ] http_request                   [api] duration_ms=28.11 method=POST route=/predict status=200
+2026-10-22T00:31:31.926322Z [info     ] http_request                   [api] duration_ms=5.32 method=POST route=/feedback status=200
+2026-10-22T00:31:31.955834Z [info     ] http_request                   [api] duration_ms=27.41 method=POST route=/predict status=200
+2026-10-22T00:31:31.962835Z [info     ] http_request                   [api] duration_ms=5.18 method=POST route=/feedback status=200
+2026-10-22T00:31:31.992834Z [info     ] http_request                   [api] duration_ms=28.13 method=POST route=/predict status=200
+2026-10-22T00:31:32.000834Z [info     ] http_request                   [api] duration_ms=5.39 method=POST route=/feedback status=200
+2026-10-22T00:31:32.030873Z [info     ] http_request                   [api] duration_ms=28.84 method=POST route=/predict status=200
+2026-10-22T00:31:32.038331Z [info     ] http_request                   [api] duration_ms=5.08 method=POST route=/feedback status=200
+2026-10-22T00:31:32.068886Z [info     ] http_request                   [api] duration_ms=29.37 method=POST route=/predict status=200
+2026-10-22T00:31:32.076566Z [info     ] http_request                   [api] duration_ms=4.82 method=POST route=/feedback status=200
+2026-10-22T00:31:32.105564Z [info     ] http_request                   [api] duration_ms=27.91 method=POST route=/predict status=200
+2026-10-22T00:31:32.113566Z [info     ] http_request                   [api] duration_ms=5.04 method=POST route=/feedback status=200
+2026-10-22T00:31:32.145084Z [info     ] http_request                   [api] duration_ms=30.12 method=POST route=/predict status=200
+2026-10-22T00:31:32.153083Z [info     ] http_request                   [api] duration_ms=5.79 method=POST route=/feedback status=200
+2026-10-22T00:31:32.186082Z [info     ] http_request                   [api] duration_ms=30.69 method=POST route=/predict status=200
+2026-10-22T00:31:32.194082Z [info     ] http_request                   [api] duration_ms=5.51 method=POST route=/feedback status=200
+2026-10-22T00:31:32.228093Z [info     ] http_request                   [api] duration_ms=31.54 method=POST route=/predict status=200
+2026-10-22T00:31:32.234177Z [info     ] http_request                   [api] duration_ms=4.71 method=POST route=/feedback status=200
+2026-10-22T00:31:32.261216Z [info     ] http_request                   [api] duration_ms=25.99 method=POST route=/predict status=200
+2026-10-22T00:31:32.266214Z [info     ] http_request                   [api] duration_ms=3.93 method=POST route=/feedback status=200
+2026-10-22T00:31:32.293803Z [info     ] http_request                   [api] duration_ms=25.96 method=POST route=/predict status=200
+2026-10-22T00:31:32.298801Z [info     ] http_request                   [api] duration_ms=3.97 method=POST route=/feedback status=200
+2026-10-22T00:31:32.325821Z [info     ] http_request                   [api] duration_ms=25.41 method=POST route=/predict status=200
+2026-10-22T00:31:32.333339Z [info     ] http_request                   [api] duration_ms=4.73 method=POST route=/feedback status=200
+2026-10-22T00:31:32.360352Z [info     ] http_request                   [api] duration_ms=26.36 method=POST route=/predict status=200
+2026-10-22T00:31:32.368353Z [info     ] http_request                   [api] duration_ms=5.59 method=POST route=/feedback status=200
+2026-10-22T00:31:32.398963Z [info     ] http_request                   [api] duration_ms=28.54 method=POST route=/predict status=200
+2026-10-22T00:31:32.405942Z [info     ] http_request                   [api] duration_ms=5.49 method=POST route=/feedback status=200
+2026-10-22T00:31:32.435512Z [info     ] http_request                   [api] duration_ms=27.78 method=POST route=/predict status=200
+2026-10-22T00:31:32.442511Z [info     ] http_request                   [api] duration_ms=4.95 method=POST route=/feedback status=200
+2026-10-22T00:31:32.471552Z [info     ] http_request                   [api] duration_ms=27.15 method=POST route=/predict status=200
+2026-10-22T00:31:32.478503Z [info     ] http_request                   [api] duration_ms=5.51 method=POST route=/feedback status=200
+2026-10-22T00:31:32.509503Z [info     ] http_request                   [api] duration_ms=28.53 method=POST route=/predict status=200
+2026-10-22T00:31:32.516510Z [info     ] http_request                   [api] duration_ms=4.89 method=POST route=/feedback status=200
+2026-10-22T00:31:32.548411Z [info     ] http_request                   [api] duration_ms=30.79 method=POST route=/predict status=200
+2026-10-22T00:31:32.556435Z [info     ] http_request                   [api] duration_ms=5.78 method=POST route=/feedback status=200
+2026-10-22T00:31:32.589970Z [info     ] http_request                   [api] duration_ms=30.96 method=POST route=/predict status=200
+2026-10-22T00:31:32.597967Z [info     ] http_request                   [api] duration_ms=5.65 method=POST route=/feedback status=200
+2026-10-22T00:31:32.629980Z [info     ] http_request                   [api] duration_ms=30.41 method=POST route=/predict status=200
+2026-10-22T00:31:32.636495Z [info     ] http_request                   [api] duration_ms=4.55 method=POST route=/feedback status=200
+2026-10-22T00:31:32.662543Z [info     ] http_request                   [api] duration_ms=24.97 method=POST route=/predict status=200
+2026-10-22T00:31:32.668543Z [info     ] http_request                   [api] duration_ms=4.49 method=POST route=/feedback status=200
+2026-10-22T00:31:32.668543Z [error    ] Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)> [asyncio]
+Traceback (most recent call last):
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-10-22T00:31:32.694736Z [info     ] http_request                   [api] duration_ms=25.54 method=POST route=/predict status=200
+2026-10-22T00:31:32.700735Z [info     ] http_request                   [api] duration_ms=4.42 method=POST route=/feedback status=200
+2026-10-22T00:31:32.726792Z [info     ] http_request                   [api] duration_ms=24.02 method=POST route=/predict status=200
+2026-10-22T00:31:32.731780Z [info     ] http_request                   [api] duration_ms=4.03 method=POST route=/feedback status=200
+2026-10-22T00:31:32.757828Z [info     ] http_request                   [api] duration_ms=24.37 method=POST route=/predict status=200
+2026-10-22T00:31:32.763812Z [info     ] http_request                   [api] duration_ms=4.62 method=POST route=/feedback status=200
+2026-10-22T00:31:32.788827Z [info     ] http_request                   [api] duration_ms=23.77 method=POST route=/predict status=200
+2026-10-22T00:31:32.793809Z [info     ] http_request                   [api] duration_ms=4.18 method=POST route=/feedback status=200
+2026-10-22T00:31:32.822877Z [info     ] http_request                   [api] duration_ms=27.42 method=POST route=/predict status=200
+2026-10-22T00:31:32.831860Z [info     ] http_request                   [api] duration_ms=6.13 method=POST route=/feedback status=200
+2026-10-22T00:31:32.861103Z [info     ] http_request                   [api] duration_ms=28.62 method=POST route=/predict status=200
+2026-10-22T00:31:32.871119Z [info     ] http_request                   [api] duration_ms=6.76 method=POST route=/feedback status=200
+2026-10-22T00:31:32.900696Z [info     ] http_request                   [api] duration_ms=28.21 method=POST route=/predict status=200
+2026-10-22T00:31:32.908697Z [info     ] http_request                   [api] duration_ms=5.5 method=POST route=/feedback status=200
+2026-10-22T00:31:32.941237Z [info     ] http_request                   [api] duration_ms=30.9 method=POST route=/predict status=200
+2026-10-22T00:31:32.950236Z [info     ] http_request                   [api] duration_ms=6.21 method=POST route=/feedback status=200
+2026-10-22T00:31:32.980235Z [info     ] http_request                   [api] duration_ms=28.78 method=POST route=/predict status=200
+2026-10-22T00:31:32.987237Z [info     ] http_request                   [api] duration_ms=4.86 method=POST route=/feedback status=200
+2026-10-22T00:31:33.018244Z [info     ] http_request                   [api] duration_ms=29.32 method=POST route=/predict status=200
+2026-10-22T00:31:33.025241Z [info     ] http_request                   [api] duration_ms=5.18 method=POST route=/feedback status=200
+2026-10-22T00:31:33.054785Z [info     ] http_request                   [api] duration_ms=27.72 method=POST route=/predict status=200
+2026-10-22T00:31:33.061786Z [info     ] http_request                   [api] duration_ms=5.13 method=POST route=/feedback status=200
+2026-10-22T00:31:33.090859Z [info     ] http_request                   [api] duration_ms=27.06 method=POST route=/predict status=200
+2026-10-22T00:31:33.098858Z [info     ] http_request                   [api] duration_ms=6.03 method=POST route=/feedback status=200
+2026-10-22T00:31:33.130882Z [info     ] http_request                   [api] duration_ms=29.55 method=POST route=/predict status=200
+2026-10-22T00:31:33.139399Z [info     ] http_request                   [api] duration_ms=6.15 method=POST route=/feedback status=200
+2026-10-22T00:31:33.170402Z [info     ] http_request                   [api] duration_ms=29.14 method=POST route=/predict status=200
+2026-10-22T00:31:33.177400Z [info     ] http_request                   [api] duration_ms=5.08 method=POST route=/feedback status=200
+2026-10-22T00:31:33.206398Z [info     ] http_request                   [api] duration_ms=27.06 method=POST route=/predict status=200
+2026-10-22T00:31:33.213398Z [info     ] http_request                   [api] duration_ms=4.88 method=POST route=/feedback status=200
+2026-10-22T00:31:33.242932Z [info     ] http_request                   [api] duration_ms=28.03 method=POST route=/predict status=200
+2026-10-22T00:31:33.249933Z [info     ] http_request                   [api] duration_ms=4.88 method=POST route=/feedback status=200
+2026-10-22T00:31:33.284046Z [info     ] http_request                   [api] duration_ms=32.73 method=POST route=/predict status=200
+2026-10-22T00:31:33.292043Z [info     ] http_request                   [api] duration_ms=5.65 method=POST route=/feedback status=200
+2026-10-22T00:31:33.327053Z [info     ] http_request                   [api] duration_ms=32.92 method=POST route=/predict status=200
+2026-10-22T00:31:33.337571Z [info     ] http_request                   [api] duration_ms=6.71 method=POST route=/feedback status=200
+2026-10-22T00:31:33.369592Z [info     ] http_request                   [api] duration_ms=30.0 method=POST route=/predict status=200
+2026-10-22T00:31:33.378292Z [info     ] http_request                   [api] duration_ms=6.16 method=POST route=/feedback status=200
+2026-10-22T00:31:33.406296Z [info     ] http_request                   [api] duration_ms=26.92 method=POST route=/predict status=200
+2026-10-22T00:31:33.413292Z [info     ] http_request                   [api] duration_ms=5.07 method=POST route=/feedback status=200
+2026-10-22T00:31:33.443862Z [info     ] http_request                   [api] duration_ms=28.37 method=POST route=/predict status=200
+2026-10-22T00:31:33.450864Z [info     ] http_request                   [api] duration_ms=4.92 method=POST route=/feedback status=200
+2026-10-22T00:31:33.481443Z [info     ] http_request                   [api] duration_ms=28.29 method=POST route=/predict status=200
+2026-10-22T00:31:33.487443Z [info     ] http_request                   [api] duration_ms=4.74 method=POST route=/feedback status=200
+2026-10-22T00:31:33.517445Z [info     ] http_request                   [api] duration_ms=27.69 method=POST route=/predict status=200
+2026-10-22T00:31:33.524451Z [info     ] http_request                   [api] duration_ms=4.91 method=POST route=/feedback status=200
+2026-10-22T00:31:33.555979Z [info     ] http_request                   [api] duration_ms=30.69 method=POST route=/predict status=200
+2026-10-22T00:31:33.563976Z [info     ] http_request                   [api] duration_ms=5.95 method=POST route=/feedback status=200
+2026-10-22T00:31:33.599283Z [info     ] http_request                   [api] duration_ms=32.71 method=POST route=/predict status=200
+2026-10-22T00:31:33.604569Z [info     ] http_request                   [api] duration_ms=3.9 method=POST route=/feedback status=200
+2026-10-22T00:31:33.631480Z [info     ] http_request                   [api] duration_ms=26.13 method=POST route=/predict status=200
+2026-10-22T00:31:33.637691Z [info     ] http_request                   [api] duration_ms=3.96 method=POST route=/feedback status=200
+2026-10-22T00:31:33.663730Z [info     ] http_request                   [api] duration_ms=25.54 method=POST route=/predict status=200
+2026-10-22T00:31:33.670730Z [info     ] http_request                   [api] duration_ms=5.02 method=POST route=/feedback status=200
+2026-10-22T00:31:33.701418Z [info     ] http_request                   [api] duration_ms=28.67 method=POST route=/predict status=200
+2026-10-22T00:31:33.708425Z [info     ] http_request                   [api] duration_ms=5.11 method=POST route=/feedback status=200
+2026-10-22T00:31:33.739514Z [info     ] http_request                   [api] duration_ms=29.62 method=POST route=/predict status=200
+2026-10-22T00:31:33.746515Z [info     ] http_request                   [api] duration_ms=5.02 method=POST route=/feedback status=200
+2026-10-22T00:31:33.775515Z [info     ] http_request                   [api] duration_ms=27.03 method=POST route=/predict status=200
+2026-10-22T00:31:33.782513Z [info     ] http_request                   [api] duration_ms=4.62 method=POST route=/feedback status=200
+2026-10-22T00:31:33.812515Z [info     ] http_request                   [api] duration_ms=28.62 method=POST route=/predict status=200
+2026-10-22T00:31:33.819518Z [info     ] http_request                   [api] duration_ms=5.32 method=POST route=/feedback status=200
+2026-10-22T00:31:33.848062Z [info     ] http_request                   [api] duration_ms=27.27 method=POST route=/predict status=200
+2026-10-22T00:31:33.855061Z [info     ] http_request                   [api] duration_ms=4.81 method=POST route=/feedback status=200
+2026-10-22T00:31:33.883709Z [info     ] http_request                   [api] duration_ms=27.08 method=POST route=/predict status=200
+2026-10-22T00:31:33.890713Z [info     ] http_request                   [api] duration_ms=4.68 method=POST route=/feedback status=200
+2026-10-22T00:31:33.919719Z [info     ] http_request                   [api] duration_ms=27.75 method=POST route=/predict status=200
+2026-10-22T00:31:33.926717Z [info     ] http_request                   [api] duration_ms=4.64 method=POST route=/feedback status=200
+2026-10-22T00:31:33.956255Z [info     ] http_request                   [api] duration_ms=28.0 method=POST route=/predict status=200
+2026-10-22T00:31:33.964255Z [info     ] http_request                   [api] duration_ms=5.5 method=POST route=/feedback status=200
+2026-10-22T00:31:33.993258Z [info     ] http_request                   [api] duration_ms=27.61 method=POST route=/predict status=200
+2026-10-22T00:31:34.000255Z [info     ] http_request                   [api] duration_ms=5.15 method=POST route=/feedback status=200
+2026-10-22T00:31:34.029294Z [info     ] http_request                   [api] duration_ms=26.46 method=POST route=/predict status=200
+2026-10-22T00:31:34.036823Z [info     ] http_request                   [api] duration_ms=5.4 method=POST route=/feedback status=200
+2026-10-22T00:31:59.369395Z [info     ] http_request                   [api] duration_ms=2.4 method=GET route=/model-info status=200
+2026-10-22T00:34:19.659417Z [warning  ] Retrying (Retry(total=6, connect=7, read=6, redirect=7, status=7)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='127.0.0.1', port=5000): Read timed out. (read timeout=120)")': /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion [urllib3.connectionpool]

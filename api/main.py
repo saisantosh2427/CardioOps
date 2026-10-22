@@ -86,7 +86,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         _get_store(app)
         await asyncio.to_thread(_refresh_model, app.state.model_service)
         refresher = None
-        if settings.api.refresh_interval_seconds > 0:
+        if settings.api.refresh_interval_seconds > 0 and not settings.api.refresh_on_request:
             refresher = asyncio.create_task(
                 _refresh_loop(app.state.model_service, settings.api.refresh_interval_seconds)
             )
@@ -113,6 +113,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.model_service = ModelService(settings)
     app.state.store = None
     app.state.started_at = time.monotonic()
+    app.state.last_model_check = 0.0
 
     @app.middleware("http")
     async def observe_requests(
@@ -121,6 +122,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         started = time.perf_counter()
         status = 500
         try:
+            if (
+                settings.api.refresh_on_request
+                and started - app.state.last_model_check >= settings.api.refresh_interval_seconds
+            ):
+                app.state.last_model_check = started
+                await asyncio.to_thread(_refresh_model, app.state.model_service)
             response = await call_next(request)
             status = response.status_code
             return response
@@ -194,8 +201,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return responses, loaded
 
     @app.get("/", include_in_schema=False)
-    def root() -> RedirectResponse:
-        return RedirectResponse(url="/docs")
+    def root(request: Request) -> RedirectResponse:
+        return RedirectResponse(url=f"{request.scope.get('root_path', '')}/docs")
 
     @app.get("/health", response_model=HealthResponse, tags=["ops"])
     def health() -> HealthResponse:

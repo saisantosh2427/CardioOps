@@ -1,0 +1,391 @@
+2026/10/21 19:28:58 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+Registry store URI not provided. Using backend store URI.
+2026/10/21 19:29:01 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/10/21 19:29:01 INFO mlflow.store.db.utils: Updating database tables
+[MLflow] Security middleware enabled with default settings (localhost-only). To allow connections from other hosts, use --host 0.0.0.0 and configure --allowed-hosts and --cors-allowed-origins.
+2026/10/21 19:29:03 WARNING mlflow.server: MLflow job execution requirements not met (MLflow job backend does not support Windows system.). Server will start without job execution support. Errors will be surfaced at job invocation time.
+2026/10/21 19:29:04 INFO:     Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2026/10/21 19:29:04 INFO:     Started parent process [32040]
+2026/10/21 19:29:06 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/21 19:29:06 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/21 19:29:06 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/21 19:29:06 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\server\fastapi_app.py:23: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\server\fastapi_app.py:23: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\server\fastapi_app.py:23: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\server\fastapi_app.py:23: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+2026/10/21 19:29:09 INFO:     Started server process [22728]
+2026/10/21 19:29:09 INFO:     Started server process [18096]
+2026/10/21 19:29:09 INFO:     Started server process [9052]
+2026/10/21 19:29:09 INFO:     Waiting for application startup.
+2026/10/21 19:29:09 INFO:     Waiting for application startup.
+2026/10/21 19:29:09 INFO:     Waiting for application startup.
+2026/10/21 19:29:09 INFO:     Started server process [8220]
+2026/10/21 19:29:09 INFO:     Waiting for application startup.
+2026/10/21 19:29:10 INFO:     Application startup complete.
+2026/10/21 19:29:10 INFO:     Application startup complete.
+2026/10/21 19:29:10 INFO:     Application startup complete.
+2026/10/21 19:29:10 INFO:     Application startup complete.
+2026/10/21 19:29:10 ERROR:    Traceback (most recent call last):
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 90, in serve
+    await self._serve(sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 105, in _serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 154, in startup
+    server = await loop.create_server(create_protocol, sock=sock, ssl=config.ssl, backlog=config.backlog)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 1561, in create_server
+    server._start_serving()
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 316, in _start_serving
+    sock.listen(self._backlog)
+OSError: [WinError 10022] An invalid argument was supplied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\starlette\routing.py", line 661, in lifespan
+    await receive()
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\fastapi\telemetry\_runtime.py", line 214, in wrapped_receive
+    message = await receive()
+              ^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2026/10/21 19:29:10 ERROR:    Traceback (most recent call last):
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 90, in serve
+    await self._serve(sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 105, in _serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 154, in startup
+    server = await loop.create_server(create_protocol, sock=sock, ssl=config.ssl, backlog=config.backlog)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 1561, in create_server
+    server._start_serving()
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 316, in _start_serving
+    sock.listen(self._backlog)
+OSError: [WinError 10022] An invalid argument was supplied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\starlette\routing.py", line 661, in lifespan
+    await receive()
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\fastapi\telemetry\_runtime.py", line 214, in wrapped_receive
+    message = await receive()
+              ^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+Process SpawnProcess-3:
+Process SpawnProcess-4:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\supervisors\multiprocess.py", line 77, in target
+    self.server.run(sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 86, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\supervisors\multiprocess.py", line 77, in target
+    self.server.run(sockets)
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 90, in serve
+    await self._serve(sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 86, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 105, in _serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 154, in startup
+    server = await loop.create_server(create_protocol, sock=sock, ssl=config.ssl, backlog=config.backlog)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 1561, in create_server
+    server._start_serving()
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 316, in _start_serving
+    sock.listen(self._backlog)
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 10022] An invalid argument was supplied
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 90, in serve
+    await self._serve(sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 105, in _serve
+    await self.startup(sockets=sockets)
+  File "C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\uvicorn\server.py", line 154, in startup
+    server = await loop.create_server(create_protocol, sock=sock, ssl=config.ssl, backlog=config.backlog)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 1561, in create_server
+    server._start_serving()
+  File "C:\Users\saisa\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 316, in _start_serving
+    sock.listen(self._backlog)
+OSError: [WinError 10022] An invalid argument was supplied
+2026/10/21 19:29:10 INFO:     127.0.0.1:50290 - "GET /health HTTP/1.1" 200 OK
+2026/10/21 19:29:15 INFO:     Waiting for child process [8220]
+2026/10/21 19:29:15 INFO:     Child process [8220] died
+2026/10/21 19:29:15 INFO:     Waiting for child process [9052]
+2026/10/21 19:29:15 INFO:     Child process [9052] died
+2026/10/21 19:29:18 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/21 19:29:18 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/21 19:29:18 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 404 Not Found
+C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\server\fastapi_app.py:23: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+C:\Users\saisa\Downloads\Enterprise-Assistant-RAG--main\BOSS\MLOPs\ml-pipeline\.venv\Lib\site-packages\mlflow\server\fastapi_app.py:23: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+2026/10/21 19:29:19 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=heart-disease-risk HTTP/1.1" 404 Not Found
+2026/10/21 19:29:19 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/experiments/create HTTP/1.1" 200 OK
+2026/10/21 19:29:19 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/experiments/get?experiment_id=1 HTTP/1.1" 200 OK
+2026/10/21 19:29:19 INFO:     Started server process [14020]
+2026/10/21 19:29:19 INFO:     Waiting for application startup.
+2026/10/21 19:29:19 INFO:     Started server process [16640]
+2026/10/21 19:29:19 INFO:     Waiting for application startup.
+2026/10/21 19:29:20 INFO:     Application startup complete.
+2026/10/21 19:29:20 INFO:     Application startup complete.
+2026/10/21 19:29:20 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/10/21 19:29:20 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:20 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:20 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/10/21 19:29:24 INFO:     127.0.0.1:50319 - "GET /api/3.0/mlflow/server-info HTTP/1.1" 200 OK
+2026/10/21 19:29:24 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/set-tag HTTP/1.1" 200 OK
+2026/10/21 19:29:24 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:24 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:24 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-inputs HTTP/1.1" 200 OK
+2026/10/21 19:29:24 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-inputs HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/runs/get?run_uuid=35d678845b8441c7828efbfbfdaa7111&run_id=35d678845b8441c7828efbfbfdaa7111 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/runs/get?run_uuid=35d678845b8441c7828efbfbfdaa7111&run_id=35d678845b8441c7828efbfbfdaa7111 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/logged-models HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/outputs HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/runs/get?run_uuid=35d678845b8441c7828efbfbfdaa7111&run_id=35d678845b8441c7828efbfbfdaa7111 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=cv_roc_auc_mean&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=cv_roc_auc_std&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=test_accuracy&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=test_precision&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=test_recall&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=test_f1&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=35d678845b8441c7828efbfbfdaa7111&metric_key=test_roc_auc&run_id=35d678845b8441c7828efbfbfdaa7111&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:26 INFO:     127.0.0.1:50300 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:32 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/logged-models/m-b6f35350354944a7bcf5055feaf44ace HTTP/1.1" 200 OK
+2026/10/21 19:29:32 INFO:     127.0.0.1:60021 - "PATCH /api/2.0/mlflow/logged-models/m-b6f35350354944a7bcf5055feaf44ace HTTP/1.1" 200 OK
+2026/10/21 19:29:32 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=35d678845b8441c7828efbfbfdaa7111&run_id=35d678845b8441c7828efbfbfdaa7111 HTTP/1.1" 200 OK
+2026/10/21 19:29:32 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/10/21 19:29:32 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/10/21 19:29:34 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/set-tag HTTP/1.1" 200 OK
+2026/10/21 19:29:34 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:34 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:34 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-inputs HTTP/1.1" 200 OK
+2026/10/21 19:29:34 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-inputs HTTP/1.1" 200 OK
+2026/10/21 19:29:34 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/logged-models HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/outputs HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=cv_roc_auc_mean&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=cv_roc_auc_std&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=test_accuracy&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=test_precision&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=test_recall&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=test_f1&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=69d9227e013343bd90ccd972e99f0542&metric_key=test_roc_auc&run_id=69d9227e013343bd90ccd972e99f0542&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/logged-models/m-536d541783ac46348aa23ae928a72d41 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "PATCH /api/2.0/mlflow/logged-models/m-536d541783ac46348aa23ae928a72d41 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/10/21 19:29:35 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/set-tag HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-inputs HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-inputs HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&run_id=ed6b9e277aa840428d4ad1da8f2fbda5 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&run_id=ed6b9e277aa840428d4ad1da8f2fbda5 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/logged-models HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/outputs HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&run_id=ed6b9e277aa840428d4ad1da8f2fbda5 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=cv_roc_auc_mean&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=cv_roc_auc_std&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=test_accuracy&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=test_precision&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=test_recall&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=test_f1&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/metrics/get-history?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&metric_key=test_roc_auc&run_id=ed6b9e277aa840428d4ad1da8f2fbda5&max_results=25000 HTTP/1.1" 200 OK
+2026/10/21 19:29:37 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/logged-models/m-04b8075bf4dc41a4b0ce9e9d44c0e619 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "PATCH /api/2.0/mlflow/logged-models/m-04b8075bf4dc41a4b0ce9e9d44c0e619 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=ed6b9e277aa840428d4ad1da8f2fbda5&run_id=ed6b9e277aa840428d4ad1da8f2fbda5 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/set-tag HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/log-batch HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=cc04265ea5c54936a586760140debb44&run_id=cc04265ea5c54936a586760140debb44 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 404 Not Found
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/registered-models/create HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/model-versions/create HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/logged-models/m-536d541783ac46348aa23ae928a72d41 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/logged-models/m-536d541783ac46348aa23ae928a72d41 HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "PATCH /api/2.0/mlflow/logged-models/m-536d541783ac46348aa23ae928a72d41/tags HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 400 Bad Request
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/registered-models/get?name=heart-disease-classifier HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/registered-models/alias HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/registered-models/get?name=heart-disease-classifier HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/model-versions/set-tag HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/registered-models/get?name=heart-disease-classifier HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "POST /api/2.0/mlflow/model-versions/set-tag HTTP/1.1" 200 OK
+2026/10/21 19:29:38 INFO:     127.0.0.1:60021 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=challenger HTTP/1.1" 400 Bad Request
+2026/10/21 19:29:46 INFO:     127.0.0.1:60035 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:29:46 INFO:     127.0.0.1:60035 - "GET /api/2.0/mlflow/registered-models/get?name=heart-disease-classifier HTTP/1.1" 200 OK
+2026/10/21 19:29:46 INFO:     127.0.0.1:60035 - "GET /api/2.0/mlflow/model-versions/get-download-uri?name=heart-disease-classifier&version=1 HTTP/1.1" 200 OK
+2026/10/21 19:30:19 INFO:     127.0.0.1:55023 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:30:25 INFO:     127.0.0.1:55025 - "GET /health HTTP/1.1" 200 OK
+2026/10/21 19:30:30 INFO:     127.0.0.1:55029 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:30:49 INFO:     127.0.0.1:52780 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:31:00 INFO:     127.0.0.1:52782 - "GET /health HTTP/1.1" 200 OK
+2026/10/21 19:31:05 INFO:     127.0.0.1:52784 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:31:19 INFO:     127.0.0.1:51107 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:31:35 INFO:     127.0.0.1:49690 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:31:35 INFO:     127.0.0.1:49690 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:31:35 INFO:     127.0.0.1:49690 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 19:31:35 INFO:     127.0.0.1:49690 - "POST /api/2.0/mlflow/logged-models/search HTTP/1.1" 200 OK
+2026/10/21 19:31:49 INFO:     127.0.0.1:64574 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:31:50 INFO:     127.0.0.1:58153 - "GET / HTTP/1.1" 200 OK
+2026/10/21 19:31:50 INFO:     127.0.0.1:58153 - "GET /static-files/static/js/main.ffbcee03.js HTTP/1.1" 200 OK
+2026/10/21 19:31:50 INFO:     127.0.0.1:57701 - "GET /static-files/static/css/main.b0f58ef9.css HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:58153 - "GET /static-files/TelemetryLogger.telemetry-worker.d0f8ea2c83c08b63528f.worker.js HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:58153 - "GET /ajax-api/3.0/mlflow/server-info HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:63475 - "GET /ajax-api/2.0/mlflow/users/current HTTP/1.1" 404 Not Found
+2026/10/21 19:31:51 INFO:     127.0.0.1:52216 - "GET /ajax-api/3.0/mlflow/assistant/config HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:62190 - "GET /ajax-api/3.0/mlflow/assistant/providers HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:57701 - "GET /static-files/static/js/4205.9e750e7b.chunk.js HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:63475 - "GET /ajax-api/3.0/mlflow/assistant/config HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:52216 - "GET /ajax-api/3.0/mlflow/assistant/providers HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:57701 - "GET /static-files/static/js/3877.9df04fb4.chunk.js HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:63475 - "GET /static-files/static/media/codex-color.17c79805c48a38ac6a548c6e993712c1.svg HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:63475 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=5&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+2026/10/21 19:31:51 INFO:     127.0.0.1:52403 - "GET /static-files/static/media/demo-tracing-screenshot.f95794fa205aa8e6c386.png HTTP/1.1" 200 OK
+2026/10/21 19:34:19 INFO:     127.0.0.1:64830 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:34:49 INFO:     127.0.0.1:62751 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:35:19 INFO:     127.0.0.1:58610 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:35:49 INFO:     127.0.0.1:58611 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:36:19 INFO:     127.0.0.1:51883 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:36:49 INFO:     127.0.0.1:50832 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:37:19 INFO:     127.0.0.1:61951 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:37:49 INFO:     127.0.0.1:51536 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:38:19 INFO:     127.0.0.1:53518 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:38:50 INFO:     127.0.0.1:57674 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:39:20 INFO:     127.0.0.1:54312 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:39:50 INFO:     127.0.0.1:63784 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:40:20 INFO:     127.0.0.1:50584 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:40:50 INFO:     127.0.0.1:64822 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:41:20 INFO:     127.0.0.1:51552 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:41:50 INFO:     127.0.0.1:61572 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:42:20 INFO:     127.0.0.1:50061 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:42:50 INFO:     127.0.0.1:59010 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:43:20 INFO:     127.0.0.1:61431 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:43:50 INFO:     127.0.0.1:59074 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:44:20 INFO:     127.0.0.1:49822 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:44:50 INFO:     127.0.0.1:51432 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:45:20 INFO:     127.0.0.1:59150 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:45:50 INFO:     127.0.0.1:55348 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:46:20 INFO:     127.0.0.1:62050 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:46:50 INFO:     127.0.0.1:61971 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:47:20 INFO:     127.0.0.1:55696 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:47:50 INFO:     127.0.0.1:64494 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:48:20 INFO:     127.0.0.1:55598 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:48:50 INFO:     127.0.0.1:56685 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:49:20 INFO:     127.0.0.1:54113 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:49:50 INFO:     127.0.0.1:65141 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:50:20 INFO:     127.0.0.1:62531 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:50:50 INFO:     127.0.0.1:57853 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:51:20 INFO:     127.0.0.1:59539 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:51:50 INFO:     127.0.0.1:52413 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:52:21 INFO:     127.0.0.1:55217 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:52:51 INFO:     127.0.0.1:53838 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:53:21 INFO:     127.0.0.1:60525 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:53:51 INFO:     127.0.0.1:49675 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:54:21 INFO:     127.0.0.1:51438 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:54:51 INFO:     127.0.0.1:52939 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:55:21 INFO:     127.0.0.1:64515 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:55:51 INFO:     127.0.0.1:64786 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:56:21 INFO:     127.0.0.1:52419 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:56:51 INFO:     127.0.0.1:52477 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:57:21 INFO:     127.0.0.1:59076 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:57:51 INFO:     127.0.0.1:53854 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:58:21 INFO:     127.0.0.1:63252 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:58:51 INFO:     127.0.0.1:59207 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:59:21 INFO:     127.0.0.1:60942 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 19:59:51 INFO:     127.0.0.1:62711 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:00:21 INFO:     127.0.0.1:62720 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:00:38 INFO:     127.0.0.1:63006 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:00:38 INFO:     127.0.0.1:63006 - "GET /api/2.0/mlflow/registered-models/get?name=heart-disease-classifier HTTP/1.1" 200 OK
+2026/10/21 20:00:38 INFO:     127.0.0.1:63006 - "GET /api/2.0/mlflow/model-versions/get-download-uri?name=heart-disease-classifier&version=1 HTTP/1.1" 200 OK
+2026/10/21 20:00:49 INFO:     127.0.0.1:63157 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:00:51 INFO:     127.0.0.1:57954 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:00:53 INFO:     127.0.0.1:56183 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:00:54 INFO:     127.0.0.1:56183 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 20:00:54 INFO:     127.0.0.1:56183 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 20:00:54 INFO:     127.0.0.1:56183 - "POST /api/2.0/mlflow/logged-models/search HTTP/1.1" 200 OK
+2026/10/21 20:01:14 INFO:     127.0.0.1:56195 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:01:14 INFO:     127.0.0.1:56195 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 20:01:14 INFO:     127.0.0.1:56195 - "GET /api/2.0/mlflow/runs/get?run_uuid=69d9227e013343bd90ccd972e99f0542&run_id=69d9227e013343bd90ccd972e99f0542 HTTP/1.1" 200 OK
+2026/10/21 20:01:14 INFO:     127.0.0.1:56195 - "POST /api/2.0/mlflow/logged-models/search HTTP/1.1" 200 OK
+2026/10/21 20:01:21 INFO:     127.0.0.1:56197 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK
+2026/10/21 20:01:51 INFO:     127.0.0.1:64783 - "GET /api/2.0/mlflow/registered-models/alias?name=heart-disease-classifier&alias=champion HTTP/1.1" 200 OK

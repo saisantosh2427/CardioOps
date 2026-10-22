@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import tomllib
 from pathlib import Path
 
 import pytest
@@ -73,3 +74,13 @@ def test_every_root_requirement_is_pinned() -> None:
         if ln.strip() and not ln.startswith("#")
     ]
     assert all("==" in ln for ln in lines)
+
+
+def test_vercel_project_dependencies_match_requirements() -> None:
+    project = tomllib.loads((PROJECT_ROOT / "pyproject.toml").read_text())
+    requirements = {
+        line.strip()
+        for line in (PROJECT_ROOT / "requirements.txt").read_text().splitlines()
+        if line.strip() and not line.startswith("#")
+    }
+    assert set(project["project"]["dependencies"]) == requirements

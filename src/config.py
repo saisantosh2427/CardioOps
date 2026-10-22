@@ -102,6 +102,7 @@ class RetrainConfig(BaseModel):
 class ApiConfig(BaseModel):
     model_uri: str = ""
     refresh_interval_seconds: int = Field(30, ge=0)
+    refresh_on_request: bool = False
     log_predictions: bool = True
     max_batch_size: int = Field(1000, ge=1)
 
